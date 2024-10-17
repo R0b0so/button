@@ -9,22 +9,26 @@
 
 <body>
     <script>
-        windows.onload = function () {
+       
             var p = 0
             document.getElementById('p1').innerHTML = p
             function Increase() {
                 p = p + 1
+                document.getElementById('p1').innerHTML = p
             }
             function Decrease() {
-
-            }
+                    p = p - 1
+                    document.getElementById('p1').innerHTML = p
+                }
+           
             function RESET() {
                 p = 0
+               document.getElementById('p1').innerHTML = p
             }
 
 
 
-        }
+        
     </script>
     <p id="p1"></p>
     <button id="button_increase" onclick="Increase()">Increase</button>
