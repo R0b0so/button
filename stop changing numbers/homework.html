@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="change()">Click me!</button>
+    <p id="p"></p>
+    <script> 
+     function change() { 
+        var p = Math.floor(Math.random() * 11)
+        document.getElementById('p').innerHTML = p
+        
+    }
+     
+    function intreval() { 
+        if(stopped){ 
+        stopped = false
+         t = setInterval(change, 10)
+        }
+        else {
+        stopped = true
+        clearInterval(t)
+        }
+}
+window.onload = function() {
+ intreval()
+}
+
+        
+    </script>
+</body>
+</html>
